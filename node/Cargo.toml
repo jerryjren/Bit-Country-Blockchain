@@ -68,22 +68,15 @@ sp-offchain = { git = "https://github.com/paritytech/substrate", branch = "rococ
 
 # Cumulus dependencies
 cumulus-client-consensus-relay-chain = { git = "https://github.com/paritytech/cumulus", branch = "rococo-v1", default-features = false }
-cumulus-client-collator = { git = "https://github.com/paritytech/cumulus", branch = "master", default-features = false }
-cumulus-client-service = { git = "https://github.com/paritytech/cumulus", branch = "master", default-features = false }
-cumulus-client-network = { git = "https://github.com/paritytech/cumulus", branch = "master", default-features = false }
-cumulus-primitives-core = { git = "https://github.com/paritytech/cumulus", branch = "master", default-features = false }
+cumulus-client-collator = { git = "https://github.com/paritytech/cumulus", branch = "rococo-v1", default-features = false }
+cumulus-client-service = { git = "https://github.com/paritytech/cumulus", branch = "rococo-v1", default-features = false }
+cumulus-client-network = { git = "https://github.com/paritytech/cumulus", branch = "rococo-v1", default-features = false }
+cumulus-primitives-core = { git = "https://github.com/paritytech/cumulus", branch = "rococo-v1", default-features = false }
 bitcountry-runtime = { path = "../runtime" }
 
 [[bin]]
 name = "bitcountry-parachain"
 path = "src/main.rs"
-
-[dev-dependencies]
-assert_cmd = "0.12"
-nix = "0.17"
-rand = "0.7.3"
-tempfile = "3.2.0"
-tokio = { version = "0.2.13", features = ["macros"] }
 
 # Polkadot dependencies
 polkadot-runtime-common = { git = "https://github.com/paritytech/polkadot", branch = "rococo-v1" }
